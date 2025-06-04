@@ -21,7 +21,7 @@ export function habitsReducer(state: AppState, action: Action): AppState {
     case 'DELETE_HABIT':
       return {
         ...state,
-        habits: state.habits.filter(h => h.id !== action.payload.id),
+        habits: state.habits.filter((h) => h.id !== action.payload.id),
         checkins: Object.fromEntries(
           Object.entries(state.checkins).filter(
             ([key]) => key !== action.payload.id
