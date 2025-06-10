@@ -9,7 +9,7 @@ export function useHabits() {
         {
           id: 'test-habit',
           name: 'Test Habit',
-          color: 'border-blue-500', // Tailwind class
+          color: 'bg-yellow-500', // Tailwind class
           createdAt: new Date().toISOString(),
         },
       ],

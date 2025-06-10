@@ -11,12 +11,15 @@ export function HabitDot({ habit, checked, onToggle }: Props) {
     <button
       onClick={onToggle}
       title={habit.name}
-      className={`w-4 h-4 rounded-full border-2 ${
-        checked ? habit.color : 'border-gray-300'
-      }`}
+      className={`w-4 h-4 rounded-full transition-colors duration-200
+        ${
+          checked
+            ? `${habit.color} border-0`             // filled circle
+            : 'border-2 border-gray-300 bg-white'   // empty circle
+        }`}
     >
       <span className="sr-only">
-        {habit.name} {checked ? 'checked' : 'not checked'}
+        {habit.name} – {checked ? 'done' : 'not done'}
       </span>
     </button>
   );
